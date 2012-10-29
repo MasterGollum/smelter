@@ -194,9 +194,9 @@ minetest.register_craftitem("smelter:iron_ingot", {
 minetest.register_craft({
 	output = 'smelter:smelter',
 	recipe = {
-		{'default:clay_brick', 'default:clay_brick', 'default:clay_brick'},
-		{'default:clay_brick', '', 'default:clay_brick'},
-		{'default:clay_brick', 'default:clay_brick', 'default:clay_brick'},
+		{'default:brick', 'default:brick', 'default:brick'},
+		{'default:brick', '', 'default:brick'},
+		{'default:brick', 'default:brick', 'default:brick'},
 	}
 })
 
