@@ -3,12 +3,47 @@ by Master Gollum
 
 Introduction:
 
-  This MOD adds a new kind of crafts (smelting) with a grid 
-  of 2x2 intended for allow to smelt materials, for example
-  to create alloys.
+  This MOD introduces a new kind of Furnace called Smelter. 
+  It is intended for provide a mean for smelt materials, for 
+  example to create alloys in a more realistic way.
+  This MOD adds also a new kind of crafts (smelting) with a 
+  2x2 grid.
+
 
   The first release transform iron_ore in iron_ingot also
-  iron_ingot + coal_lump in steel_ingot
+  iron_ingot + coal_lump in steel_ingot as example of 
+  uses.
+
+  CRAFT for a Smelter
+  [cobble] [cobble] [cobble]
+  [cobble] [furnace] [cobble] 
+  [cobble] [cobble] [cobble]
+
+For developers:
+
+  Anyone that intends to define a new smelting they MUST 
+  be registered with the crafter MOD.
+
+  crafter.register_craft({
+	  type = "smelting",
+	  output = "smelter:iron_ingot",
+	  recipe = {
+      {"default:iron_lump"}
+    }
+  })
+
+  crafter.register_craft({
+	  type = "smelting",
+	  output = "default:steel_ingot",
+	  recipe = {
+      {"smelter:iron_ingot"},
+      {"default:coal_lump"}
+    }
+  })
+
+Depends
+  default
+  crafter
 
 
 Release Notes

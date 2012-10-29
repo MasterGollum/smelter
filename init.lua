@@ -154,7 +154,7 @@ minetest.register_abm({
 		local srclist = inv:get_list("src")
 		
 		if srclist then
-			cooked = crafter.get_craft_result({method = "smelting", width = 1, items = srclist})
+			cooked = crafter.get_craft_result({method = "smelting", width = 2, items = srclist})
 		end
 		if fuellist then
 			fuel = minetest.get_craft_result({method = "fuel", width = 1, items = fuellist})
